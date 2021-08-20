@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as contactsActions from '../../redux/contacts-actions';
 import s from './Form.module.css';
 
-function Form({ onSubmit }) {
+export default function Form() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  const dispatch = useDispatch();
+
+  const onSubmit = ({ name, number }) =>
+    dispatch(contactsActions.addContact({ name, number }));
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -69,10 +74,3 @@ function Form({ onSubmit }) {
     </form>
   );
 }
-
-const mapDispatchToProps = dispatch => ({
-  onSubmit: ({ name, number }) =>
-    dispatch(contactsActions.addContact({ name, number })),
-});
-
-export default connect(null, mapDispatchToProps)(Form);
