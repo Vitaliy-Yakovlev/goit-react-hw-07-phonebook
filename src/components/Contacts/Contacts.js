@@ -2,21 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as contactsActions from '../../redux/contacts-actions';
+import { getVisibleContacts } from '../../redux/contacts-selectors';
 import s from './Contacts.module.css';
 
-const getVisibleContacts = (allContacts, filter) => {
-  const normalizedFilter = filter.toLowerCase();
-
-  return allContacts.filter(contact =>
-    contact.name.toLowerCase().includes(normalizedFilter),
-  );
-};
-
 export default function Contacts() {
-  const contacts = useSelector(state =>
-    getVisibleContacts(state.contacts.items, state.contacts.filter),
-  );
-
+  const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
 
   const onClick = id => dispatch(contactsActions.deleteContact(id));
@@ -40,9 +30,10 @@ export default function Contacts() {
 Contacts.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
     }),
   ),
+  filter: PropTypes.string,
 };
