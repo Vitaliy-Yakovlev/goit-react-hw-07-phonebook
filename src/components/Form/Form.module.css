@@ -6,6 +6,7 @@
   margin-right: auto;
   font-size: 20px;
   margin-bottom: 15px;
+  color: #fff;
 }
 
 .input {
@@ -15,6 +16,7 @@
   border-radius: 10px;
   outline: none;
   box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
+  color: #fff;
 }
 
 .btn {

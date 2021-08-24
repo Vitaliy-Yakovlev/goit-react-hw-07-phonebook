@@ -5,13 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* background-image: url(./images/telefonnogoApparata.jpg); */
+  background-image: url(./images/173e11b5462d86831a06bdd29d158ec6.jpg);
+  background-repeat: no-repeat;
+
+  background-position: -50px -300px;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-body {
-  background-color: rgb(241, 255, 255);
 }

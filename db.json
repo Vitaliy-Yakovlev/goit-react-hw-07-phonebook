@@ -1,3 +1,9 @@
 {
-  "contacts": []
+  "contacts": [
+    {
+      "name": "Vitaliy",
+      "id": "77oYkzYl3",
+      "number": "+380509090660"
+    }
+  ]
 }
