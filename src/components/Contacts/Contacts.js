@@ -23,7 +23,7 @@ export default function Contacts() {
   }, [dispatch]);
 
   if (loader) {
-    return <Loader type="ThreeDots" color="#50bbe9" className={s.loader} />;
+    return <Loader type="ThreeDots" color="#dfbe47" className={s.loader} />;
   }
 
   if (error) {

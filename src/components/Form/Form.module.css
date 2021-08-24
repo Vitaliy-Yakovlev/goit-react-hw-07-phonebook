@@ -6,7 +6,7 @@
   margin-right: auto;
   font-size: 20px;
   margin-bottom: 15px;
-  color: #fff;
+  color: #e0ba51;
 }
 
 .input {
@@ -16,14 +16,14 @@
   border-radius: 10px;
   outline: none;
   box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
-  color: #fff;
+  color: #e0ba51;
 }
 
 .btn {
   border: none;
   padding: 8px 15px;
-  background-color: rgb(80, 187, 233);
-  color: #fff;
+  background-color: #dfbe47;
+  color: #472f00;
   font-weight: 400;
   font-family: inherit;
   cursor: pointer;
@@ -37,4 +37,5 @@
 .btn:hover,
 .btn:focus {
   background-color: rgb(29, 225, 107);
+  color: #fff;
 }

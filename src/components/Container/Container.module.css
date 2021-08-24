@@ -7,12 +7,12 @@
   padding: 15px;
   margin-bottom: 100px;
 
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #dfbe47;
   border-radius: 15px;
 }
 
 .title {
   text-align: center;
 
-  color: #fff;
+  color: #e0ba51;
 }

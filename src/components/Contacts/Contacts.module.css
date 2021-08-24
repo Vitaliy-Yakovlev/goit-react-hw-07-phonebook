@@ -10,7 +10,7 @@
   align-items: center;
   font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: #e0ba51;
 }
 
 .item:not(:first-child) {
@@ -20,8 +20,8 @@
 .btn {
   border: none;
   padding: 5px 10px;
-  background-color: rgb(80, 187, 233);
-  color: #fff;
+  background-color: #dfbe47;
+  color: #472f00;
   font-weight: 400;
   font-family: inherit;
   cursor: pointer;
@@ -35,6 +35,7 @@
 .btn:hover,
 .btn:focus {
   background-color: rgb(225, 29, 71);
+  color: #fff;
 }
 
 .loader {
