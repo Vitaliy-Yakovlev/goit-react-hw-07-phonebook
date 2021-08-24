@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { AiTwotoneDelete } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import * as contactsActions from '../../redux/contacts-actions';
-import { getVisibleContacts } from '../../redux/contacts-selectors';
+import Loader from 'react-loader-spinner';
+import { deleteContact, fetchContacts } from '../../redux/contacts-operations';
+import {
+  getVisibleContacts,
+  getError,
+  getLoading,
+} from '../../redux/contacts-selectors';
 import s from './Contacts.module.css';
 
 export default function Contacts() {
   const contacts = useSelector(getVisibleContacts);
+  const loader = useSelector(getLoading);
+  const error = useSelector(getError);
+
   const dispatch = useDispatch();
 
-  const onClick = id => dispatch(contactsActions.deleteContact(id));
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  if (loader) {
+    return <Loader type="ThreeDots" color="#50bbe9" className={s.loader} />;
+  }
+
+  if (error) {
+    return <h1 className={s.error}>Что-то пошло не так :(</h1>;
+  }
+
+  const onClick = id => dispatch(deleteContact(id));
 
   return (
     <ul className={s.list}>
@@ -18,7 +39,7 @@ export default function Contacts() {
           <li className={s.item} key={id}>
             {name}: {number}
             <button className={s.btn} type="button" onClick={() => onClick(id)}>
-              Delete
+              <AiTwotoneDelete />
             </button>
           </li>
         );

@@ -35,3 +35,16 @@
 .btn:focus {
   background-color: rgb(225, 29, 71);
 }
+
+.loader {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}

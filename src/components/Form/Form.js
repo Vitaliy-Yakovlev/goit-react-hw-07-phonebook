@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import * as contactsActions from '../../redux/contacts-actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { addContact } from '../../redux/contacts-operations';
+import { getError } from '../../redux/contacts-selectors';
 import s from './Form.module.css';
 
 export default function Form() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
+  const nameItems = useSelector(state =>
+    state.contacts.items.map(contact => contact.name),
+  );
+  const error = useSelector(getError);
+
   const dispatch = useDispatch();
 
-  const onSubmit = ({ name, number }) =>
-    dispatch(contactsActions.addContact({ name, number }));
+  const onSubmit = ({ name, number }) => dispatch(addContact({ name, number }));
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -29,6 +35,16 @@ export default function Form() {
 
   const handleSubmit = event => {
     event.preventDefault();
+
+    if (nameItems.join('').toLowerCase() === name.toLowerCase()) {
+      toast.error(`${name} is already in contacts`);
+      reset();
+      return;
+    }
+
+    if (error) {
+      return;
+    }
 
     onSubmit({ name, number });
 
