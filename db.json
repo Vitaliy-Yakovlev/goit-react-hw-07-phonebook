@@ -1,19 +1,9 @@
 {
   "contacts": [
     {
-      "name": "Vitaliy",
-      "id": "sXDD64C51",
-      "number": "+380509090660"
-    },
-    {
       "name": "Rosie Simpson",
       "id": "dee8NYtFC",
       "number": "+380509090660"
-    },
-    {
-      "name": "Yulia",
-      "id": "CWiLfq1yO",
-      "number": "+380663662850"
     }
   ]
 }
