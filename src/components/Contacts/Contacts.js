@@ -23,11 +23,11 @@ export default function Contacts() {
   }, [dispatch]);
 
   if (loader) {
-    return <Loader type="ThreeDots" color="#dfbe47" className={s.loader} />;
+    return <Loader type="ThreeDots" color="#51cde6" className={s.loader} />;
   }
 
   if (error) {
-    return <h1 className={s.error}>Что-то пошло не так :(</h1>;
+    return <h2 className={s.error}>Что-то пошло не так :(</h2>;
   }
 
   const onClick = id => dispatch(deleteContact(id));

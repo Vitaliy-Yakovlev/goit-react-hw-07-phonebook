@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
-  color: #e0ba51;
+  color: #ffffff;
 }
 
 .item:not(:first-child) {
@@ -20,8 +20,8 @@
 .btn {
   border: none;
   padding: 5px 10px;
-  background-color: #dfbe47;
-  color: #472f00;
+  background-color: #51cde6;
+  color: rgb(225, 29, 71);
   font-weight: 400;
   font-family: inherit;
   cursor: pointer;

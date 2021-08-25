@@ -1,30 +1,31 @@
 .label {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 230px;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
-  margin-bottom: 15px;
-  color: #e0ba51;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #191919;
 }
 
 .input {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 5px;
   border-radius: 10px;
   outline: none;
   box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
-  color: #e0ba51;
+  color: #2a2828;
 }
 
 .btn {
   border: none;
   padding: 8px 15px;
-  background-color: #dfbe47;
-  color: #472f00;
-  font-weight: 400;
+  background-color: #51cde6;
+  color: #2a2828;
+  font-weight: 500;
   font-family: inherit;
   cursor: pointer;
   outline: none;

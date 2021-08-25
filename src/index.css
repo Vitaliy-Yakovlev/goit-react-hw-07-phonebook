@@ -7,11 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* background-image: url(./images/telefonnogoApparata.jpg); */
-  background-image: url(./images/173e11b5462d86831a06bdd29d158ec6.jpg);
+  /* background-image: url(./images/173e11b5462d86831a06bdd29d158ec6.jpg); */
+  background-image: url(./images/8930253864990.png);
   background-repeat: no-repeat;
 
-  background-position: -50px -300px;
-  background-color: black;
+  /* background-position: -50px -300px; */
+  background-position: 50% 50%;
+  background-color: rgb(255, 255, 255);
 }
 
 code {

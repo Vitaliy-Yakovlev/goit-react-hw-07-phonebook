@@ -12,6 +12,7 @@ export default function Form() {
   const nameItems = useSelector(state =>
     state.contacts.items.map(contact => contact.name),
   );
+
   const error = useSelector(getError);
 
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ export default function Form() {
   const handleSubmit = event => {
     event.preventDefault();
 
-    if (nameItems.join('').toLowerCase() === name.toLowerCase()) {
+    if (nameItems.join('').toLowerCase().includes(name.toLowerCase())) {
       toast.error(`${name} is already in contacts`);
       reset();
       return;
