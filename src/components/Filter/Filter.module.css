@@ -4,10 +4,11 @@
   width: 230px;
   align-items: center;
   font-size: 20px;
+  font-weight: 500;
   margin-bottom: 5px;
   margin-bottom: 5px;
 
-  color: #ffffff;
+  color: #2a2828;
 }
 
 .input {
